@@ -1,0 +1,273 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+    outline: none;
+    resize: none;
+}
+
+:root{
+    font-size: 62.5%;
+    --color-01:white;
+    --color-02:#312D64;
+
+    --color-text-01:#B52184;
+    --color-text-02:#312D64;
+    --color-text-03:white;
+}
+
+body,
+textarea{
+    font-size: 1.6rem;
+    font-family: 'Mulish', sans-serif;
+}
+
+.hero{
+    text-align: center;
+}
+
+.hero,
+.contact{
+    background: #F9F4FB;
+}
+
+.container{
+    padding: 0 3.2rem;
+    width: min(144rem, 100%);
+    margin: 0 auto;
+    min-width: 32rem;
+}
+
+.astronaut{
+    max-width: min(720px, 100%);
+    max-height: 730px;
+    object-fit: cover;
+}
+
+.intro-text{
+    text-align: center;
+    padding-bottom: 9.3rem;
+    animation: animationOpacity 2s;
+}
+
+.intro-text h1{
+    margin-top: 1.7rem;
+    color: var(--color-text-01);
+    font-size: 3.2rem;
+    font-weight: 5.8rem;
+    animation: fontbulger 3s;
+}
+
+.intro-text h3{
+    margin-top: 0.5rem;
+    color: var(--color-text-02);
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+/* .imgButton{
+    margin: 3.5rem auto 0;
+    display: flex;
+    border: 4px solid var(--color-text-01);
+    height: 10.5rem;
+    width: 5.8rem;
+    border-radius: 76rem;
+    justify-content: center;
+    align-items: center;
+} */
+
+.cards{
+    padding-top: 5.2rem;
+    padding-bottom: 5.2rem;
+    background: linear-gradient(134deg, #343193 0%, #302C63 100% );
+}
+
+.cards-wrapper{
+    display: grid;
+    gap: 5rem;
+}
+
+.card{
+    padding: 2.6rem;
+    border-radius: 2rem;
+    background: white;
+    box-shadow: 0px 3.3107693195343018px 13.243077278137207px 0px rgba(0, 0, 0, 0.25);
+    --delay: .2s;
+    animation: appear .4s var(--delay) backwards;
+}
+
+.card img{
+    width: 8rem;
+    height: 8rem;
+}
+
+.card h2{
+    margin-top: 3.4rem;
+    color: var(--color-text-01);
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+.card p{
+    margin-top: 2rem;
+    color: var(--color-text-02);
+    font-weight: 600;
+}
+
+.contact{
+    padding-top: 7.8rem;
+    padding-bottom: 6.5rem;
+}
+
+form fieldset{
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+form fieldset legend{
+    color: var(--color-text-01);
+    font-size: 3.2rem;
+    font-weight: 900;
+    margin-bottom: 4.3rem;
+    animation: animationOpacity 3s;
+}
+
+form fieldset input,
+form fieldset textarea{
+    background: none;
+    width: 100%;
+    border: 1.5px solid var(--color-02);
+    border-radius: 16px;
+    padding: 12px 16px 12px 40px;
+
+    color: var(--color-text-02);
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+form fieldset input:focus,
+form fieldset textarea:focus{
+    border: 1.5px solid var(--color-text-01);
+}
+
+form fieldset input[type=text]{
+    background: url(./assets/personicon.svg) no-repeat 1rem 0.8rem;
+}
+
+form fieldset input[type=email]{
+    background: url(./assets/at.svg) no-repeat 1rem 0.8rem;
+}
+
+form fieldset input[type=submit]{
+    cursor: pointer;
+    height: 45px;
+    padding: 16px;
+    color: white;
+    border-radius: 16px;
+    background: linear-gradient(134deg, #343193 0%, #302C63 100%);
+}
+
+form fieldset input[type=submit]:hover{
+    filter: hue-rotate(5deg)
+}
+
+.contact img{
+    display: none;
+}
+
+.footer{
+    text-align: center;
+    padding: 16px;
+    background: linear-gradient(134deg, #343193 0%, #302C63 100%);
+    color: white;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+/* Desktop */
+@media (min-width: 1024px){
+
+    .hero{
+        padding-bottom: 10.4rem;
+    }
+
+    .hero-wrapper{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+
+    .intro{
+        padding-bottom: 0;
+    }
+
+    .intro-text h1{
+        margin-top: 31.2rem;
+        font-size: 5.8rem;
+        font-weight: 900;
+    }
+
+    .intro-text h3{
+        margin-top: 0.8rem;
+        font-size: 3.2rem;
+        font-weight: 600;
+    }
+
+    .imgButton{
+        margin: 12.9rem 0;
+    }
+
+    .cards{
+        padding-top: 6.4rem;
+        padding-bottom: 6.4rem;
+        gap: 6rem;
+    }
+
+    .cards-wrapper{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .contact{
+        display: flex;
+        padding: 0;
+    }
+
+    .contact img{
+        display: block;
+        max-width: 50%;
+    }
+
+    form{
+        padding: 9.5rem 3rem 0 0;
+    }
+
+    .contact-wrapper{
+        max-width: 800px;
+    }
+
+}
+
+@keyframes animationOpacity {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+}
